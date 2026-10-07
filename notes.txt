@@ -1,0 +1,22 @@
+routing means showing different components / pages , based on the URL 
+
+/ => default page => home.jsx 
+/about => About.jsx 
+
+
+
+to enable the routing in the react application => BrowserRouter  => URL based navigation 
+
+Routes => to contain the route 
+
+route => a route connect a URL with a page / component 
+
+to create a route 
+path => url name 
+element => page of the name 
+
+
+Link tag => to navigate the page or component 
+
+
+MainLayout => to set the navbar and footer  , and just change the pages (outlet ) 
