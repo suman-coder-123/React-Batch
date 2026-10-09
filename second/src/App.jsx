@@ -6,6 +6,7 @@
 // import Register from "./pages/Register";
 
 
+
 // const App = () => {
 //   return (
 //    <BrowserRouter>
@@ -28,21 +29,37 @@
 
 
 
-import { Route, Routes} from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Profile from "./pages/Profile";
-import Setting from "./pages/Setting";
+// import { Route, Routes} from "react-router-dom";
+// import Dashboard from "./pages/Dashboard";
+// import Profile from "./pages/Profile";
+// import Setting from "./pages/Setting";
+
+// const App = () => {
+//   return (
+//     <Routes>
+//       <Route path="/dashboard" element={<Dashboard />} >
+//       {/* <Route index element={<Profile />} /> */}
+//       <Route path="profile" element={<Profile />}/>
+//       <Route path="setting" element={<Setting />} />
+//       </Route>
+//     </Routes>
+//   )
+// }
+
+// export default App
+
+
+import ProductCard from "./pages/ProductCard"
+
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/dashboard" element={<Dashboard />} >
-      {/* <Route index element={<Profile />} /> */}
-      <Route path="profile" element={<Profile />}/>
-      <Route path="setting" element={<Setting />} />
-      </Route>
-    </Routes>
+    <div>
+      <ProductCard name="watch" price="3000" />
+      <ProductCard  name="mobile" price="80000"/>
+    </div>
   )
 }
 
 export default App
+

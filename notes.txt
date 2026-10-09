@@ -20,3 +20,20 @@ Link tag => to navigate the page or component
 
 
 MainLayout => to set the navbar and footer  , and just change the pages (outlet ) 
+
+
+
+component to component => import or export 
+
+props => props are used to pass data from one component to another component 
+
+
+
+
+A Hook is a special function provided by react that lets functional component use react features such as state , refs , context , effect 
+
+useState() => store and update component state 
+
+useEffect() => synchronizes components with external systems 
+
+useContext() => reads data from react context (globally)
