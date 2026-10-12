@@ -37,3 +37,14 @@ useState() => store and update component state
 useEffect() => synchronizes components with external systems 
 
 useContext() => reads data from react context (globally)
+
+
+
+
+
+useEffect => it is hook used to synchronizes a component with an external system 
+
+
+external system includes :
+
+1. API calling , timer , setIntervals , request , response , event listener , third part libraries 
