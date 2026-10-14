@@ -1,6 +1,12 @@
 
 // const App = () => {
 
+import { useState } from "react"
+import { ThemeContext } from "./context/ThemeContext";
+import Navbar from "./Navbar";
+import Profile from "./Profile";
+
+
 
 
 
@@ -221,18 +227,120 @@
 
 
 
-import ProductCard from './components/ProductCard'
-import products from './data/product'
+// import ProductCard from './components/ProductCard'
+// import products from './data/product'
+
+// const App = () => {
+//   return (
+//     <div>
+//      {products.map((product) => {
+//        <ProductCard  key={product.id} 
+//       product={product}/>
+//      })}
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import { useRef } from "react";
+
+// const App = () => {
+
+    // const inputRef = useRef(null);
+
+    // function handleClick() {=
+    //     inputRef.current.focus();
+    // }
+
+
+//     const countRef = useRef(0);
+
+//     function handleClick () {
+//         countRef.current++;
+//         console.log(countRef.current);
+//     }
+
+//   return (
+//     <div>
+//       <input ref={inputRef} type="text" placeholder="enter your name" />
+//       <button onClick={handleClick}>Foucs input</button>
+
+
+//       <button onClick={handleClick}>Increase Count</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import { UserContext } from "./context/UserContext";
+// import Dashboard from "./Dashboard";
+// import Navbar from "./Navbar";
+// import Profile from "./Profile";
+
+
+
+// const App = () => {
+
+//     const user = {
+//         name : "suman",
+//         email : "suman@gmail.com",
+//         role : "admin",
+//     }
+
+//     // const userName = "suman";
+//   return (
+//     // <UserContext.Provider value={userName}>
+//     //     <Navbar />
+//     // </UserContext.Provider>
+
+//     <UserContext.Provider value={user}>
+//         <Navbar />
+//         <Profile />
+//         <Dashboard />
+//     </UserContext.Provider>
+//   )
+// }
+
+// export default App
+
+
+
+
+
 
 const App = () => {
+
+    const [darkMode , setDarkmode] = useState(true);
+
+    function toggle () {
+        setDarkmode(prev => !prev);
+    }
   return (
-    <div>
-     {products.map((product) => {
-       <ProductCard  key={product.id} 
-      product={product}/>
-     })}
-    </div>
+  
+      <ThemeContext.Provider value={{darkMode , toggle }}>
+
+        <div className={darkMode ? "bg-gray-900 text-white min-h-screen" : "bg-white text-black min-h-screen"}>
+            <Navbar />
+            <Profile />
+
+
+
+
+        </div>
+
+      </ThemeContext.Provider>
+  
   )
 }
 
 export default App
+
+
+
+
+
+

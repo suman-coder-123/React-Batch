@@ -48,3 +48,29 @@ useEffect => it is hook used to synchronizes a component with an external system
 external system includes :
 
 1. API calling , timer , setIntervals , request , response , event listener , third part libraries 
+
+
+
+useRef => it is react hook that lets you store a value between renders without causing re-render 
+when that values changes 
+
+
+
+
+syntax 
+
+const myRef = useRef(initialvalue)
+
+
+
+useContext =>  this react hook allow components to access shared data with passing props manually through every intermediate component 
+
+prop drilling => passing props though components like this 
+
+
+
+create context => create a shared data channel 
+
+provider context => specify whihc component can access the shared data 
+
+consume context => use useContext() to read the data 
