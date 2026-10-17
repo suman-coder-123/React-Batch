@@ -1,9 +1,13 @@
 
 // const App = () => {
 
-import { useState } from "react"
-import { ThemeContext } from "./context/ThemeContext";
-import Navbar from "./Navbar";
+// import { useState } from "react"
+// import { ThemeContext } from "./context/ThemeContext";
+// import Navbar from "./Navbar";
+// import Profile from "./Profile";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+import ProductDeatils from "./ProductDeatils";
 import Profile from "./Profile";
 
 
@@ -312,32 +316,55 @@ import Profile from "./Profile";
 
 
 
+// const App = () => {
+
+//     const [darkMode , setDarkmode] = useState(true);
+
+//     function toggle () {
+//         setDarkmode(prev => !prev);
+//     }
+//   return (
+  
+//       <ThemeContext.Provider value={{darkMode , toggle }}>
+
+//         <div className={darkMode ? "bg-gray-900 text-white min-h-screen" : "bg-white text-black min-h-screen"}>
+//             <Navbar />
+//             <Profile />
+
+
+
+
+//         </div>
+
+//       </ThemeContext.Provider>
+  
+//   )
+// }
+
+// export default App
+
+
+
+
 const App = () => {
-
-    const [darkMode , setDarkmode] = useState(true);
-
-    function toggle () {
-        setDarkmode(prev => !prev);
-    }
   return (
-  
-      <ThemeContext.Provider value={{darkMode , toggle }}>
+    <BrowserRouter>
 
-        <div className={darkMode ? "bg-gray-900 text-white min-h-screen" : "bg-white text-black min-h-screen"}>
-            <Navbar />
-            <Profile />
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/products/:id" element={ <ProductDeatils/>} />
+    </Routes>
+    </BrowserRouter>
 
-
-
-
-        </div>
-
-      </ThemeContext.Provider>
-  
   )
 }
 
 export default App
+
+
+
+
 
 
 

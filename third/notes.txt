@@ -1,0 +1,76 @@
+routing means showing different components / pages , based on the URL 
+
+/ => default page => home.jsx 
+/about => About.jsx 
+
+
+
+to enable the routing in the react application => BrowserRouter  => URL based navigation 
+
+Routes => to contain the route 
+
+route => a route connect a URL with a page / component 
+
+to create a route 
+path => url name 
+element => page of the name 
+
+
+Link tag => to navigate the page or component 
+
+
+MainLayout => to set the navbar and footer  , and just change the pages (outlet ) 
+
+
+
+component to component => import or export 
+
+props => props are used to pass data from one component to another component 
+
+
+
+
+A Hook is a special function provided by react that lets functional component use react features such as state , refs , context , effect 
+
+useState() => store and update component state 
+
+useEffect() => synchronizes components with external systems 
+
+useContext() => reads data from react context (globally)
+
+
+
+
+
+useEffect => it is hook used to synchronizes a component with an external system 
+
+
+external system includes :
+
+1. API calling , timer , setIntervals , request , response , event listener , third part libraries 
+
+
+
+useRef => it is react hook that lets you store a value between renders without causing re-render 
+when that values changes 
+
+
+
+
+syntax 
+
+const myRef = useRef(initialvalue)
+
+
+
+useContext =>  this react hook allow components to access shared data with passing props manually through every intermediate component 
+
+prop drilling => passing props though components like this 
+
+
+
+create context => create a shared data channel 
+
+provider context => specify whihc component can access the shared data 
+
+consume context => use useContext() to read the data 

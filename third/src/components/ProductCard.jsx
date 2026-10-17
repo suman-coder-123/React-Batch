@@ -5,7 +5,7 @@ const ProductCard = ({product}) => {
     <div>
       <h1>{product.name}</h1>
       <p>{product.price}</p>
-      <Link to={`/product/${product.id}`}></Link>
+      <Link to={`/products/${product.id}`}>view details </Link>
     </div>
   )
 }

@@ -74,3 +74,18 @@ create context => create a shared data channel
 provider context => specify whihc component can access the shared data 
 
 consume context => use useContext() to read the data 
+
+
+
+
+useParams() => it allows you to access the parameter of the current URL 
+
+form validation 
+
+
+
+validation in react 
+
+input => user can type something in input => how to store => useState
+
+onchange =>  parameter => e => e.target.value  => setname 
