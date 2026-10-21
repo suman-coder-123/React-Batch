@@ -89,3 +89,12 @@ validation in react
 input => user can type something in input => how to store => useState
 
 onchange =>  parameter => e => e.target.value  => setname 
+
+
+API intergrate => axios is a js library to communicate with the APIs
+
+
+
+
+
+
