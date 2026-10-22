@@ -96,5 +96,37 @@ API intergrate => axios is a js library to communicate with the APIs
 
 
 
+useReducer() => it is react hook used to manage state through a reducer function and actions 
+
+
+baisc syntax 
+
+
+const [state , dispatch] = useReducer(reducer , initialState);
+
+state => current state value 
+dispatch => send an action to the reducer 
+reducer => function that decides how state work or change 
+initialState => stating state 
+
+
+
+useMemo() => it is an hook to avoid unnecessary calculations 
+
+useMemo() can cache the calculation result and reuse it until its dependencies change 
+
+
+syntax 
+
+
+const cachedValue = useMemo(() => {
+    return calculation;
+} , [dependencies]);
+
+
+
+
+
+
 
 
