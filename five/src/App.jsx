@@ -1,7 +1,9 @@
 // import { useEffect, useState } from "react"
 // import axios from "axios";
 
-import { useMemo, useReducer, useRef, useState } from "react"
+
+
+// import { useMemo, useReducer, useRef, useState } from "react"
 
 // const App = () => {
 
@@ -151,23 +153,58 @@ import { useMemo, useReducer, useRef, useState } from "react"
 
 
 
+// const App = () => {
+
+//   const inputRef = useRef(null);
+
+//   function focusInput() {
+//     inputRef.current.focus();
+//   }
+//     return (
+//     <div>
+//       <input ref={inputRef} 
+//       placeholder="enter your name"/>
+
+
+//       <button onClick={focusInput}> Foucs Input </button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import { lazy, Suspense, useState } from "react"
+import Home from "./Home"
+
+const About = lazy(() => import("./About"));
+
+
 const App = () => {
 
-  const inputRef = useRef(null);
-
-  function focusInput() {
-    inputRef.current.focus();
-  }
-    return (
+  const [pages , setPages]  = useState("home");
+  return (
     <div>
-      <input ref={inputRef} 
-      placeholder="enter your name"/>
+      <div>
+      <button onClick={() => setPages("home")}>Home</button>
+      <button onClick={() => setPages("about")}>About</button>
+  </div>
+
+    <hr />
 
 
-      <button onClick={focusInput}> Foucs Input </button>
-    </div>
+    {pages === "home" ? (<Home />) : (<Suspense fallback={<h2>Loading About Page ...</h2>}>
+     <About />
+    </Suspense>
+    )}
+
+      </div>
   )
 }
 
 export default App
+
+
+
+
+
 

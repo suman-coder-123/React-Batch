@@ -125,6 +125,16 @@ const cachedValue = useMemo(() => {
 
 
 
+code splitting  => load some components only when they are needed 
+
+react lazy()  => loads a components dynamically 
+
+suspense  => display fallback UI while that component is loading  
+
+
+
+
+
 
 
 
